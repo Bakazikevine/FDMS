@@ -36,6 +36,10 @@ const facilitatorSchema = new mongoose.Schema(
     role: {
       type: String,
       required: true,
+      enum: {
+        values: ['Technical facilitator', 'Assistant facilitator'],
+        message: 'Role must be either Technical or Assistant'
+    }
     },
   },
   { timestamps: true }
